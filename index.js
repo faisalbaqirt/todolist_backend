@@ -11,6 +11,9 @@ app.use(passport.initialize())
 const AuthRoute = require("./routes/AuthRoute")
 app.use("/api/v1/auth", AuthRoute)
 
+const TodoRoute = require("./routes/TodoRoute")
+app.use("/api/v1/todolist", TodoRoute)
+
 const port = process.env.PORT || 5000;
 
 app.listen(port, ()=> {
